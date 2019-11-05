@@ -1,0 +1,200 @@
+@charset "EUC-KR";
+
+body {
+	background-color: #f8f9fa;	
+}
+#container {
+	width: 950px;
+	margin: 50px auto;
+}
+input, select {
+	padding: 7px 0 7px 10px;
+	border: 1px solid #ced4da;
+	border-radius: 5px;
+}
+input[type="text"], select {
+	height: 35px;
+	padding: 0 0 0 10px;
+}
+hr {
+	border: 1px solid #E1E1E1;
+}
+.error {
+	display: none;
+	font-size: 14px;
+	color: red;
+}
+
+
+/* ----------------- header ----------------- */
+header {
+	text-align: center;
+}
+header span {
+	font-size: 18px;
+}
+
+
+/* ----------------- section ----------------- */
+/*---------*/
+.float_left {
+	float: left;
+}
+.float_right {
+	float: right;
+}
+.wid50 {
+	width: 48%;
+}
+.wid90 {
+	width: 94%;
+}
+.wid100 {
+	width: 97%;
+}
+.wid40 {
+	width: 35%;
+}
+.clear {
+	clear: both;
+	margin: 0;
+}
+/*---------*/
+section {
+	margin: 50px 0;
+	overflow: hidden;
+}
+#sec_left {
+	float: left;
+	width: 65%;
+}
+form div {
+	margin-bottom: 20px;
+}
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+#divUser {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+.username {
+	background-color: #e9ecef;
+	border: 1px solid #ced4da;
+	border-right: none;
+	border-radius: 5px 0 0 5px;
+	padding: 0 15px;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+}
+#username {
+	border-radius: 0 5px 5px 0;
+	width: 90%;
+}
+#form_check {
+	margin: 20px 0;
+}
+.divCard {
+	margin: 0;
+}
+.cvv {
+	margin-left: 20px;
+}
+#formSubmit {
+	background-color: #007bff;
+	padding: 10px 0;
+	border: none;
+	color: white;
+	width: 100%;
+	font-size: 20px;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+#sec_right {
+	float: right;
+	width: 30%;
+}
+#sec_right > div {
+	overflow: hidden;
+}
+#sec_right h2 {
+	float: left;
+}
+#sec_right p {
+	float: right;
+	background-color: #6c757d;
+	color: white;
+	font-weight: bold;
+	padding: 5px 12px;
+	border-radius: 45%;
+	padding-top: 7px;
+}
+ul {
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+li {
+	padding: 15px 20px;
+	overflow: hidden;
+	border: 1px solid #ced4da;
+	border-bottom: none;
+	background-color: white;
+	position: relative;
+}
+li:last-child {
+	border-bottom: 1px solid #ced4da;
+}
+.small {
+	color: #6c757d;
+	font-size: 12px;
+}
+.price {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+.green {
+	background-color: #f8f9fa;
+	color: #28a745 !important;
+}
+#buy {
+	border: 1px solid #ced4da;
+	margin-top: 10px;
+	padding: 10px;
+}
+#buyText {
+	float: left;
+	border-radius: 3px 0 0 3px;
+	font-size: 16px;
+	float: left;
+	width: 60%;
+}
+#buySubmit {
+	float: left;
+	background-color: #6c757d;
+	color: white;
+	border: none;
+	display: inline-block;
+	border-radius: 0 3px 3px 0;
+	font-size: 15px;
+	float: left;
+	width: 35%;
+	height: 37px;
+	padding: 0;
+}
+
+/* ----------------- footer ----------------- */
+footer {
+	text-align: center;
+}
+footer p {
+	color: #007bff;
+	font-weight: bold;
+}
+

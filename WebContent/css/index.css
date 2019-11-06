@@ -1,32 +1,30 @@
 @charset "EUC-KR";
 
-body {
+body { /*화면 전체에 배경색과 폰트지정*/
 	background-color: #f8f9fa;
 	font-family: 'Open Sans', sans-serif;
 }
-#container {
+#container { /*글 전체를 감싸는 부분의 넓이지정 후 가운데 정렬*/
 	width: 950px;
-	margin: 50px auto;
+	margin: 50px auto; /*상하에는 50px의 여백을 주고 가운데 정렬*/
 }
-input, select {
-	padding: 7px 0 7px 10px;
+input[type="text"], select { /*input태그 중 text type과 모든 select태그에 동일한 border적용*/
 	border: 1px solid #ced4da;
-	border-radius: 5px;
-}
-input[type="text"], select {
+	border-radius: 5px; /*모서리 각진부분 둥글게*/
 	height: 35px;
-	padding: 0 0 0 10px;
+	padding: 0 0 0 10px; /*태그 안 왼쪽에만 패딩값 지정*/
 }
-hr {
+hr { /*모든 수평선에 동일한 border색상 적용*/
 	border: 1px solid #E1E1E1;
 }
-.error {
-	display: none;
+.error { /*error클래스를 가진 태그에 적용*/
+	display: none; /*화면에 안보이게*/
 	font-size: 14px;
 	color: red;
 }
 
 
+/*반응형이라도 header와 footer부분의 css는 동일해서 밖으로 빼놓고 변경되는 부분만 적용되게 함*/
 /* ----------------- header ----------------- */
 header {
 	text-align: center;
@@ -44,9 +42,9 @@ footer p {
 	font-weight: bold;
 }
 
-@media all and (min-width:700px) {
+@media all and (min-width:700px) { /*큰화면일경우 -> 화면크기에서 최소 700px까지 적용됨*/
 	/* ----------------- section ----------------- */
-	/*---------*/
+	/*-----해당클래스를 가진 태그는 다 적용되게 따로 빼서 적어놓음-----*/
 	.float_left {
 		float: left;
 	}
@@ -65,55 +63,56 @@ footer p {
 	.wid40 {
 		width: 35%;
 	}
-	.clear {
+	.clear { /*float때문에 정렬안되는걸 방지하기 위한 방법1(형제태그에 clear both적용)*/
 		clear: both;
 		margin: 0;
 	}
-	/*---------*/
+	/*----------*/
+	
 	section {
 		margin: 50px 0;
-		overflow: hidden;
+		overflow: hidden; /*float때문에 정렬안되는걸 방지하기 위한 방법2(부모에 overflow hidden적용)*/
 	}
-	#sec_left {
+	#sec_left { /*section전체부분 중 Billing address부분은 왼쪽 정렬 후 넓이 지정*/
 		float: left;
 		width: 65%;
 	}
-	form div {
+	form div { /*form태그 안에 있는 모든 div에 마진값 적용*/
 		margin-bottom: 20px;
 	}
 	label {
 		display: block;
 		margin-bottom: 5px;
 	}
-	#divUser {
+	#divUser { /*username입력하는 부분에서 @와 input태그를 묶은 div*/
 		width: 100%;
 		overflow: hidden;
 		margin: 0;
 	}
-	.username {
+	.username { /*username -> @부분*/
 		background-color: #e9ecef;
 		border: 1px solid #ced4da;
 		border-right: none;
-		border-radius: 5px 0 0 5px;
+		border-radius: 5px 0 0 5px; /*border의 좌측 상단과 하단에 둥글게 지정*/
 		padding: 0 15px;
 		text-align: center;
 		height: 35px;
-		line-height: 35px;
+		line-height: 35px; /*높이 지정 후 글자가 상하로 가운데 정렬되게 지정*/
 	}
-	#username {
-		border-radius: 0 5px 5px 0;
+	#username { /*username -> input부분*/
+		border-radius: 0 5px 5px 0; /*border의 우측 상단과 하단에 둥글게 지정*/
 		width: 90%;
 	}
-	#form_check {
+	#form_check { /*체크박스 묶은 div*/
 		margin: 20px 0;
 	}
-	.divCard {
+	.divCard { /*card정보 입력하는 div*/
 		margin: 0;
 	}
 	.cvv {
 		margin-left: 20px;
 	}
-	#formSubmit {
+	#formSubmit { /*submit버튼*/
 		background-color: #007bff;
 		padding: 10px 0;
 		border: none;
@@ -124,11 +123,11 @@ footer p {
 		margin-top: 20px;
 	}
 	
-	#sec_right {
+	#sec_right { /*section전체부분 중 Your cart부분은 오른쪽 정렬 후 넓이 지정*/
 		float: right;
 		width: 30%;
 	}
-	#sec_right > div {
+	#sec_right > div { /*#sec_right바로 밑에 자식인 div에만 적용되게 함(h2,p태그의 float정렬때문에 따로 지정)*/
 		overflow: hidden;
 	}
 	#sec_right h2 {
@@ -144,7 +143,7 @@ footer p {
 		padding-top: 7px;
 	}
 	ul {
-		list-style: none;
+		list-style: none; /*리스트 앞 마커는 지정하지 않기 위해 적용*/
 		width: 100%;
 		padding: 0;
 		margin: 0;
@@ -155,9 +154,9 @@ footer p {
 		border: 1px solid #ced4da;
 		border-bottom: none;
 		background-color: white;
-		position: relative;
+		position: relative; /*price클래스의 position위치 지정하기 위해 적음*/
 	}
-	li:last-child {
+	li:last-child { /*li태그 중 가장 마지막 li태그만 적용*/
 		border-bottom: 1px solid #ced4da;
 	}
 	.small {
@@ -165,27 +164,27 @@ footer p {
 		font-size: 12px;
 	}
 	.price {
-		position: absolute;
+		position: absolute; /*position relative기준으로 우측과 상단에 20px씩 여백 적용*/
 		right: 20px;
 		top: 20px;
 	}
 	.green {
 		background-color: #f8f9fa;
-		color: #28a745 !important;
+		color: #28a745 !important; /*!important => 우선적용위해 적어놓음*/
 	}
-	#buy {
+	#buy { /*promo code를 입력하는 부분을 묶은 div*/
 		border: 1px solid #ced4da;
 		margin-top: 10px;
 		padding: 10px;
 	}
-	#buyText {
+	#buyText { /*promo code입력하는 input태그*/
 		float: left;
 		border-radius: 3px 0 0 3px;
 		font-size: 16px;
 		float: left;
 		width: 60%;
 	}
-	#buySubmit {
+	#buySubmit { /*redeem submit버튼*/
 		float: left;
 		background-color: #6c757d;
 		color: white;
@@ -202,7 +201,7 @@ footer p {
 
 /*---------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:699px) { /*모바일화면일경우 -> 최대 699px까지 적용됨*/
 	/* ----------------- header ----------------- */
 	header, footer {
 		width: 90%;

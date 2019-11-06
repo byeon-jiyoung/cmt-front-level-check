@@ -61,7 +61,7 @@ footer p {
 		width: 97%;
 	}
 	.wid40 {
-		width: 35%;
+		width: 36%;
 	}
 	.clear { /*float때문에 정렬안되는걸 방지하기 위한 방법1(형제태그에 clear both적용)*/
 		clear: both;
@@ -201,7 +201,7 @@ footer p {
 
 /*---------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width:699px) { /*모바일화면일경우 -> 최대 699px까지 적용됨*/
+@media screen and (max-width:700px) { /*모바일화면일경우 -> 최대 700px까지 적용됨*/
 	/* ----------------- header ----------------- */
 	header, footer {
 		width: 90%;
